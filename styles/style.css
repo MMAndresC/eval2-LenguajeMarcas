@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+*{
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body{
+  font-family: 'Roboto', sans-serif !important;
+  background-color: #8cb4cf !important;
+  background-image: url("https://www.transparenttextures.com/patterns/shattered-dark.png");
+}
+
+header{
+  min-height: 15vh;
+}
+
+nav{
+  background-color: rgb(237, 29, 36);
+  color: white;
+}
+
+main{
+  min-height: 80vh;
+}
+
+footer{
+  min-height: 5vh;
+  margin: 2% 0 0 0;
+  padding: 3%;
+  background-color: rgb(237, 29, 36);
+  color: white;
+}
+
+footer a{
+  font-size: clamp(0.6rem, 2.5vw, 1rem);
+  color: white;
+}
+
+ul svg:hover{
+  fill-opacity: 70%;
+}
+
+.bar-input-search{
+  margin: 1% 0 !important;
+}
+
+input{
+  min-width: 60%;
+  margin-right: 20%;
+}
+
+.order-by{
+  min-width: 50%;
+}
+
+.menu-comics{
+  font-size: clamp(1rem, 2.5vw, 4rem);
+}
+
+.menu-comics-detail{
+  font-size: clamp(1rem, 2.5vw, 4rem);
+  color: white;
+}
+
+.menu-comics-detail a{
+  color: white;
+}
+
+.menu-comics-detail span,
+.menu-comics{
+  background-color: white;
+  color: rgb(237, 29, 36);
+  padding: 0 8px;
+}
+
+.menu-social a{
+  text-decoration: none;
+  color: white;
+}
+
+.card-container{
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  min-width: 200px;
+  max-width: 300px;
+  cursor: pointer;
+  background-color: #78848c;
+  background-image: url("https://www.transparenttextures.com/patterns/robots.png");
+}
+
+.card-container-img{
+  width: 90%;
+  margin-top: 5%;
+  margin-left: 5%;
+  overflow: hidden;
+}
+
+.card-image{
+  width: 100%;
+  transition: transform 1s;
+}
+
+.card-container:hover .card-image{
+  transform: scale(1.2);
+}
+
+.card-container:hover{
+  animation: selected 2.5s ease-in-out infinite alternate;
+  box-shadow: rgba(140, 180, 207, 0.15) 0px 2px 5px 0px, rgba(140, 180, 207, 0.05) 0px 1px 1px 0px;
+}
+
+.character-container{
+  width: 200px !important;
+  border: 1px solid rgb(81, 81, 197);
+  border-radius: 2%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.character-container a{
+  color:white;
+}
+
+.customize{
+  padding: 0 !important; 
+  background-color: #8cb4cf !important;
+  background-image: url("https://www.transparenttextures.com/patterns/shattered-dark.png");
+  color: black !important;
+}
+
+.accordion-item{
+  border: 0 !important;
+}
+
+.accordion{
+  width: 60% !important;
+  margin-left: 20%;
+}
+
+.loader{
+  position: absolute;
+  left: 48%;
+  top: 45%;
+}
+
+#carouselShowComic img{
+  height: 225px;
+  width: 80% !important;
+  margin-left: 10% !important;
+  object-position: center;
+  object-fit: fill;
+}
+
+.hidden{
+  display: none;
+}
+
+
+@keyframes selected{
+0%{
+  -webkit-box-shadow: inset -2px -5px 44px 0px rgba(173,22,17,1);
+  -moz-box-shadow: inset -2px -5px 44px 0px rgba(173,22,17,1);
+  box-shadow: inset -2px -5px 44px 0px rgba(173,22,17,1);
+}
+100%{
+  -webkit-box-shadow: inset 10px 10px 222px 0px rgba(173,22,17,1);
+  -moz-box-shadow: inset 10px 10px 222px 0px rgba(173,22,17,1);
+  box-shadow: inset 10px 10px 222px 0px rgba(173,22,17,1);
+}
+}
+
+@media (min-width: 992px) { 
+  .details-container{
+    max-height: 411px;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1200px) { 
+  .details-container{
+    max-height: 525px;
+    overflow: hidden;
+  }
+}
+
