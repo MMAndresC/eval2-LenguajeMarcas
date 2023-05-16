@@ -119,7 +119,12 @@ const addEventToSelect = () => {
     const select = document.querySelector('.order-by');
     select.addEventListener('change', event => {
         const container = document.querySelector('.characters-container');
-        container.remove();
+        if(container){
+            container.remove();
+        }else{
+            document.querySelector('[type = search]').value = '';
+        }
+        
         //Hay comics que no tienen ficha de personajes
         if (listCharacters.length !== 0) {
             if (select.value === 'asc') {

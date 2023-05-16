@@ -20,6 +20,7 @@ const addEventToSelect = () => {
     const select = document.querySelector('.order-by');
     select.addEventListener('change', event => {
         deleteContainer('container');
+        if(filteredComics.length === 0) document.querySelector('[type=search]').value = ''; 
         if (select.value === 'asc')
             filteredComics.length !== 0
                 ? drawCards(orderResultsAlphabeticallyAsc(filteredComics, 'title'))
